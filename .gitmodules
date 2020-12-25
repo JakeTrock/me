@@ -1,6 +1,3 @@
 [submodule "programs/fridgegames"]
 	path = programs/fridgegames
 	url = https://github.com/JakeTrock/fridgegames
-[submodule "programs/newSprint"]
-	path = programs/newSprint
-	url = https://github.com/JakeTrock/newSprint
