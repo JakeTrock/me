@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="Jakesite.css" type="text/css" charset="utf-8" />
     <title>Jacob Trock's Website</title>
     <script src="winscript.js"></script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 </head>
 
 <body>
@@ -210,13 +211,13 @@
                             <h2>Nebulous Branding</h2><br>
                         </li>
                         <ul>
-                            <li><a href="./images/neb/madsciencehero.png">mad science "hero" spread</a><br>
-                            <li><a href="./images/neb/mascot.png">mascot illustration</a><br>
-                            <li><a href="./images/neb/blockedEnv.png">blocked environment illustration</a><br>
-                            <li><a href="./images/neb/changefailure.png">change failure rate illustration</a><br>
-                            <li><a href="./images/neb/meantimetorecover.png">mean time to recover illustration</a><br>
-                            <li><a href="./images/neb/thruput.png">labor throughput illustration</a><br>
-                            <li><a href="./images/neb/timeperweek.png">time per week illustration</a><br>
+                            <li><a href="./images/neb/ntext.svg">logo w/text</a><br>
+                            <li><a href="./images/neb/nlogo.png">logo w/o text</a><br>
+                            <li><a href="./images/neb/hero.svg">"hero" spread</a><br>
+                            <li><a href="./images/neb/404.svg">404 page</a><br>
+                            <li><a href="./images/neb/tech.svg">"tech we use" banner</a><br>
+                            <li><a href="./images/neb/mail.svg">mail icon<a><br>
+                            <li><a href="./images/neb/mascot.svg">mascot with toolbox</a><br>
                         </ul>
                         <br>
                         <li style="list-style-type:none;">
@@ -289,7 +290,7 @@
                         <div class="box">
                             <p class="large">
                                 Here are some graphic design projects which I have selected to share with you. Most are
-                                large in size and resolution, so I had to link to them rather than embedding them.
+                                large in size and resolution, so I had to link to them rather than embedding them. Unless otherwise stated, all works are copyright Jacob Trock
                             </p>
                         </div>
                     </div>
@@ -299,8 +300,9 @@
     </div>
 
     <script>
+        const mwin = document.getElementById("window-main")
+        new cursoreffects.bubbleCursor({element: mwin});
         draggable("window-main");
-        draggable("window-abt");
         draggable("window-prg");
         draggable("window-prgor");
         draggable("window-rob");
