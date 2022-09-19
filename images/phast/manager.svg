@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="panel3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.5874189"
+     inkscape:cx="348.99421"
+     inkscape:cy="267.73021"
+     inkscape:window-width="1920"
+     inkscape:window-height="1127"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid7319" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="147.29251"
+       y="66.141732"
+       width="343.68252"
+       height="47.244094"
+       id="rect4965" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1391"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,4.7625,0,1 @ F,0,0,1,0,4.7625,0,1 @ F,0,0,1,0,4.7625,0,1 @ F,0,0,1,0,4.7625,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="18"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1111"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect884"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <rect
+       x="147.29251"
+       y="66.141731"
+       width="343.68253"
+       height="47.244095"
+       id="rect4965-3" />
+    <rect
+       x="147.29251"
+       y="66.141731"
+       width="343.68253"
+       height="47.244095"
+       id="rect4965-35" />
+    <rect
+       x="147.29251"
+       y="66.141731"
+       width="343.68253"
+       height="47.244095"
+       id="rect4965-35-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect895-6-6-2"
+       style="fill:#f3fcff;fill-opacity:1;stroke:#000000;stroke-width:0.0859113;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1"
+       d="m 31.332506,79.449716 v 49.562354 h 38.01593 V 93.610286 l -14.61783,-14.14264 -0.002,-0.0179 z"
+       inkscape:export-filename="/home/phast/Desktop/statefile.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="rect895-6-6-2-6-7"
+       style="fill:#f3fcff;fill-opacity:1;stroke:#000000;stroke-width:0.0859112;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1"
+       d="m 54.726656,93.571686 v -14.16069 l 14.61795,14.14295 0.004,0.0448 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/phast/Desktop/statefile.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#69d9ff;fill-opacity:1;stroke-width:0.0473136;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect3638"
+       width="29.243027"
+       height="0.70803428"
+       x="34.256966"
+       y="107.77113"
+       ry="4.9097956e-08"
+       inkscape:export-filename="/home/phast/Desktop/statefile.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.17868339,0,0,0.18733425,7.9382402,88.300166)"
+       id="text4963"
+       style="font-size:40px;line-height:1.25;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible';white-space:pre;shape-inside:url(#rect4965)"
+       inkscape:export-filename="/home/phast/Desktop/statefile.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         x="147.29297"
+         y="102.53759"
+         id="tspan8625"><tspan
+           style="font-style:italic;font-weight:bold;-inkscape-font-specification:'Atkinson Hyperlegible Bold Italic'"
+           id="tspan8623">State File</tspan></tspan></text>
+    <g
+       id="g5631"
+       inkscape:export-filename="/home/phast/Desktop/executor.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <circle
+         style="fill:#b8b8b8;fill-opacity:1;stroke:#b8b8b8;stroke-width:4.065;stroke-miterlimit:4;stroke-dasharray:12.195, 4.065;stroke-dashoffset:0;stroke-opacity:1"
+         id="path2492-6"
+         cx="57.485386"
+         cy="26.678288"
+         r="13.229166" />
+      <ellipse
+         style="fill:#8a7b7b;fill-opacity:1;stroke-width:0.735885;stroke-miterlimit:4;stroke-dasharray:2.20766, 0.735885;stroke-dashoffset:0"
+         id="path2492"
+         cx="57.652802"
+         cy="26.844051"
+         rx="5.4812932"
+         ry="5.550251" />
+      <circle
+         style="fill:#b8b8b8;fill-opacity:1;stroke:#b8b8b8;stroke-width:2.31111;stroke-miterlimit:4;stroke-dasharray:6.93333, 2.31111;stroke-dashoffset:0;stroke-opacity:1"
+         id="path2492-6-7"
+         cx="56.818947"
+         cy="57.046352"
+         r="7.5212913" />
+      <ellipse
+         style="fill:#8a7b7b;fill-opacity:1;stroke-width:0.418379;stroke-miterlimit:4;stroke-dasharray:1.25514, 0.418379;stroke-dashoffset:0"
+         id="path2492-5"
+         cx="56.914131"
+         cy="57.140591"
+         rx="3.1163266"
+         ry="3.1555319" />
+      <circle
+         style="fill:#b8b8b8;fill-opacity:1;stroke:#b8b8b8;stroke-width:2.39623;stroke-miterlimit:4;stroke-dasharray:7.1887, 2.39623;stroke-dashoffset:0;stroke-opacity:1"
+         id="path2492-6-7-3"
+         cx="71.659576"
+         cy="46.810986"
+         r="7.7983208" />
+      <ellipse
+         style="fill:#8a7b7b;fill-opacity:1;stroke-width:0.433789;stroke-miterlimit:4;stroke-dasharray:1.30137, 0.433789;stroke-dashoffset:0"
+         id="path2492-5-5"
+         cx="71.758263"
+         cy="46.90871"
+         rx="3.2311094"
+         ry="3.2717588" />
+      <path
+         id="rect2429-5-3"
+         style="fill:#c8c7c5;stroke-width:0.260034"
+         d="m 23.8125,21.16667 3.96875,-3.96875 h 26.458331 l 3.968749,3.96875 4e-6,37.041663 -3.96875,3.96875 H 41.010417 27.78125 l -3.96875,-3.96875 z"
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:export-filename="/home/phast/Desktop/assayfolder.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         id="rect1485-6-2"
+         style="fill:#95b0b9;fill-opacity:1;stroke:none;stroke-width:0.385693"
+         d="m 10.583334,32.333333 h 73.61216 v 10 h -73.61216 z m 60.98534,5.00422 z"
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/phast/Desktop/assayfolder.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-20.535776,16.521673)"
+         id="text4963-6-9"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Atkinson Hyperlegible';-inkscape-font-specification:'Atkinson Hyperlegible Bold Italic';white-space:pre;shape-inside:url(#rect4965-35-6)"
+         inkscape:export-filename="/home/phast/Desktop/assayfolder.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           x="147.29297"
+           y="102.53759"
+           id="tspan8627">Assay Executor</tspan></text>
+    </g>
+    <g
+       id="g5635"
+       transform="translate(2.6458333,10.583336)"
+       inkscape:export-filename="/home/phast/Desktop/vert_arrow.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="rect10358"
+         style="fill:#fd4444;stroke-width:1.665;stroke-dasharray:4.99499, 1.665"
+         d="m 127,47.624997 h 15.875 l -7.9375,13.22917 v 0 z"
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/phast/Desktop/arrow.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.295, 1.765;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 134.9375,2.6458287 V 42.333327"
+         id="path1378"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="23.8125"
+       y="119.0625"
+       id="text7941"><tspan
+         sodipodi:role="line"
+         id="tspan7939"
+         style="stroke-width:0.264583"
+         x="23.8125"
+         y="119.0625" /></text>
+  </g>
+</svg>
