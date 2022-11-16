@@ -1,0 +1,60 @@
+If done right, floppy archiving is pretty easy. I wrote a simple little script(it does need improving in some respects, for instance, the disk name is stored in a text file in the directory and you can end up with duplicate disks) that rips floppies.
+You also may want to enable auto-mount for whichever FDD you're using, as otherwise you'll have to run something to the effect of `sudo mount /dev/sda /mnt/xyz` every time you wish to open a disk, and when archiving, this can get to be a headache, because half the disks are dead or just plain unformatted.
+
+That aside, the procedure for the following script is to run it(`./fddrip.sh`) insert a disk, mount it in another window if you refuse to automount, wait for the copy to happen, then when the prompt to remove the disk pops up, remove the disk, insert the next and hit any key. Rinse and repeat until the directory on your desktop has all the files in it.
+
+To see the result of an attempt with an older version of the script, check out: https://archive.org/details/floppy-auto-archiver
+
+(fddrip.sh)
+"""
+# Wait for a floppy to be inserted then copy the contents
+#
+mkdir ~/Desktop/flOut
+echo "Phloppy copy, press <ctrl>C to exit"
+echo "Looking for disk..."
+datestamp="$(date +"%s")"
+numdisks=1
+
+#
+# Go into a continuous loop always looking for a new floppy
+while :
+    do
+####### Get the mount point of /dev/sda out of the mounts file
+        TEST=$(grep /dev/sda /proc/self/mounts)
+####### If it doesn't exist, loop until it does with 1 second pause
+        if [ "$TEST" == "" ]; then
+                echo -ne "."
+                sleep 1
+        else
+                echo
+############### Got it!  Need to strip the mount point out of the string
+                TEST2=${TEST:9}
+                set $TEST2
+                TEST=$1
+############### Do the copy process for the disk we found
+                # we don't want it to just be named "disk"
+                fname="/home/kapn/Desktop/flOut/$datestamp-numdisks"
+
+                echo "Copying from $TEST"
+                mkdir $fname
+                touch "$fname/diskname"
+                echo ${TEST##*/} > "$fname/diskname"
+                cp -vr $TEST/* $fname
+
+                echo "+++++++++++++++(EJECT floppy)+++++++++++++++" # ejection prompt
+                  echo "Press any key to continue"
+                  while [ true ] ; do
+                    read -t 3 -n 1
+                    if [ $? = 0 ] ; then
+                      break ;
+                    else
+                      echo "waiting for the keypress"
+                    fi
+                  done
+                  sleep 2
+
+        fi
+######## Still looping! Go back and wait for another floppy!
+    done
+exit()
+"""

@@ -1,0 +1,50 @@
+This is a script I wrote to archive cds, much like my CD archiving script. You connect a usb cd drive(it should probably be set to auto-mount in your fstab), and swap disks when the program tells you to. All files are written out to your desktop. (This script was not tested, I just derived it from the floppy script. Please email me a correction if I was wrong)
+
+(cdrip.sh)
+"""
+# Wait for a CD to be inserted then copy the contents
+#
+mkdir ~/Desktop/flOut
+echo "Phloppy copy, press <ctrl>C to exit"
+echo "Looking for disk..."
+datestamp="$(date +"%s")"
+numdisks=1
+
+#
+# Go into a continuous loop always looking for a new CD
+while :
+    do
+####### Get the mount point of /dev/sda out of the mounts file
+        TEST=$(grep /dev/sr0 /proc/self/mounts)
+####### If it doesn't exist, loop until it does with 1 second pause
+        if [ "$TEST" == "" ]; then
+                echo -ne "."
+                sleep 1
+        else
+                echo
+############### Got it!  Need to strip the mount point out of the string
+                TEST2=${TEST:9}
+                set $TEST2
+                TEST=$1
+############### Do the copy process for the disk we found
+                # we don't want it to just be named "disk"
+                fname="/home/kapn/Desktop/flOut/$datestamp-numdisks"
+
+                echo "Copying from $TEST"
+                mkdir $fname
+                touch "$fname/diskname"
+                echo ${TEST##*/} > "$fname/diskname"
+                cp -vr $TEST/* $fname
+
+                echo "+++++++++++++++(EJECT CD)+++++++++++++++" # ejection prompt
+############### Eject the CD with suitable pauses to avoid any buffer problems
+                sleep 1
+                eject cdrom
+                sleep 2
+
+        fi
+######## Still looping! Go back and wait for another CD!
+    done
+exit()
+
+"""
