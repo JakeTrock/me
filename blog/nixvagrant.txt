@@ -1,0 +1,120 @@
+(Complaining)=======================================
+
+I have been using linux since elementary school, thanks to my wonderful muse, Billiam Gates(or perhaps the blame should be levy-d on Michael Dell here) who thought that putting windows vista on a computer with 512mb ram, an intel cerentino and a 40gb ipod hard drive was anywhere close to a good idea. This led me to use slitaz off of the strange proprietary dell CD drive, burned on a black memorex disk that I took everywhere(it did get annoying at times however, as the same port was used by the floppy drive, meaning I could do no floppy-ing on linux). Old memories aside, for a while I missed the stability of slitaz. The whole thing was fixed on an iso 996 filesystem, meaning it was read-only, I saved my preferences, flashes and files on a 1gb SD card. This sounds like hell, but I missed it.
+
+I started with ubuntu, then kubuntu, then left that for arch when cannonical thought it was a remotely good idea to replace everything with snaps. For a while, I developed what I call "the arch cycle" where I would use an install of arch for about 2.5 months, where in the last 2 weeks of the third month(or sooner if I had been extra naughty) were spent in a special kind of linux hell where the amount of configurational cruft reached terminal velocity and launched me into a hellpit of os recovery. Rinsen and reepeten until I had a job at a microscopy company, when I had the bright idea to switch to nixos after an arch cycle left me with a hive outbreak and some wasted days.
+
+Now I'll admit, nixos isn't perfect, but it's better than 90% of the other distros simply because of it's declarative nature. My nixos box is much more customized than any other distro I run because I can be sure that any advanced thing I configure will STAY CONFIGURED THAT WAY(yargh.). However one thing annoys me about it. And that thing is software development. While I used nixos at my job, I lost several days of work to nix-filing to the frusturation of my boss. Now the zealous of you out there will chide me and say I simply have to get better at nix-filing. I don't want to honestly. I just like nixos because for the core functions(e.g. the 60% of the time where I'm using this thing as an office machine) I don't want a dev box with all this unstable stuff. I want something I can use for years and years without worry. I switched back to arch and just lived with the cycles to return to my original operational efficiency, but it was such a disenheartening experience.
+
+The breaking point for me was September 4th(11/22). I was in my accounting class and I needed to open libreoffice calc(excel for masochists), and in a humiliating show of the power of free software, I booted arch only to have my WM of choice, KDE, crash spectacularly, no titlebars, no desktop, no toolbar, nada, zippo, zilch. Adding insult to injury, the network would not connect and the clock was incorrect. And to sate the zealots, I DO NOT TINKER WITH MY OS, I simply install the updates, and use my local dev environments and applications. The riskiest thing I do is 1.) have a NVIDIA card in a laptop and 2.) use sleep mode liberally. Now what is my fault however, is that in a fit of reactionary indecisiveness, I tried to shrink my arch partition, so I could have my arch cake, and my nixos cake, eating both. However, the more pipes you have, the more leaks are prone to crop up, so I borked my LUKS header and lost everything. The reason I accepted the rest before was that I did daily backups of my machine to a remote server. Well I had changed my rsync script at some point and never checked if the files actually made it to the server after that change. Oops. Lost everything that wasn't on my nextcloud(thankfully, that was most things).
+
+Now in nixland, I've decided to make my time developing here a little more efficient, by not waiting 30 minutes for yarn2nix/npm2nix to make a nixfile that dosen't even work(thanks .sass files), by not having to explicitly specify eeevvvrryyyy file I install for python. I thought simple. What's the most common "alternative" development environment. Ubuntu, with vscode(at the time I was using kate exclusively, on an arch host). But I just said I was using nixos, how's this done? You probably guessed it, vagrant-controlled virtualbox. And before you get all testy about me not using libvirt with arch, guess what, I tried and living a life of contrarianism stacked on contrarianism is no longer my way. sorry bub. Anywho, here's the part you actually care about.
+
+(Tutorial)=======================================
+
+So you'll need 1 thing to start, a nix host. First, add vagrant to your systempackages:
+
+"""
+environment.systemPackages = with pkgs; [
+    vagrant
+    vscode-fhs #I prefer FHS, makes extensions work all nice-like
+];
+"""
+
+Then of course, you'll want to add virtualbox to your running programs like so(I'm not sure if it'd be a problem, but you may also need to set nixpkgs.config.allowUnfree = true; I'm not sure if vbox is foss):
+
+"""
+virtualisation.virtualbox.host = {
+    enable = true;
+    package = pkgs.virtualboxHeadless;
+};
+"""
+
+On that front, that's all you'll need to do. Most of the heavy lifts are done by the vagrantfile and the two desktop scripts:
+
+(Vagrantfile)
+"""
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/kinetic64"
+
+  config.vm.network "public_network", use_dhcp_assigned_default_route: true
+
+  config.vm.synced_folder "./", "/home/vagrant/dev" #change this to your main dev folder, ./ is the host, /home/vagrant/dev is the guest
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y zsh fzf python3 yarnpkg curl wget git gh
+    curl -fsSL https://code-server.dev/install.sh | sh
+
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    curl -L git.io/antigen > ~/antigen.zsh
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+
+    echo "export ZSH="$HOME/.oh-my-zsh"\nsource $HOME/antigen.zsh\n\nexport NVM_DIR="$HOME/.nvm"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm\n[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion\n# Use Oh-My-Zsh\nantigen use oh-my-zsh\n\n# Set theme\nantigen theme agnoster\n\n# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)\nantigen bundle zsh-users/zsh-autosuggestions\nantigen bundle zsh-users/zsh-completions\nantigen bundle zsh-users/zsh-syntax-highlighting\nantigen bundle copypath\nantigen bundle copyfile\nantigen bundle history\nantigen bundle history-substring-search\n\nantigen apply" > .zshrc
+    nvm install node && nvm use node
+  SHELL
+end
+"""
+
+You should go into the directory with this(preferably empty) and run `vagrant box add ubuntu/kinetic64` then run `vagrant up` and `vagrant provision`(maybe not though, I may not get this 100% right because I assembled the image, and did the provisioning later. If I ever had to recreate it, perhaps I will fix any inacuracies here)
+
+Then you'll need to run `vagrant ssh-config` and copy the output verbatim to your ~/.ssh/config (for the impatient of you `vagrant ssh-config >> ~/.ssh/config`)
+
+Next, you'll get into the cockpit of your freshly installed vscode and install microsoft's remote ssh editor. Point it to your .ssh/config and it should connect and everything should be peachy.
+
+Fool around in the ssh shell to the machine, and when everything's to your liking, on the host machine, type `vagrant snapshot save baseline`(the name dosen't have to be 'baseline')
+
+Finally, here are the two .desktop files I use to switch it on and off.
+
+(localdev activate.desktop)
+"""
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/run/current-system/sw/bin/vagrant snapshot restore baseline
+GenericName[en_US]=
+GenericName=
+Icon=preferences-desktop-wallpaper
+MimeType=
+Name[en_US]=localdev activate
+Name=localdev activate
+Path=/home/{YOURNAME}/devenv
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+"""
+
+(localdev\ destroy.desktop)
+"""
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/run/current-system/sw/bin/vagrant halt
+GenericName[en_US]=
+GenericName=
+Icon=preferences-desktop
+MimeType=
+Name[en_US]=localdev destroy
+Name=localdev destroy
+Path=/home/{YOURNAME}/devenv
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+"""
