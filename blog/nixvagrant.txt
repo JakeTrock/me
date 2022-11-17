@@ -24,9 +24,11 @@ environment.systemPackages = with pkgs; [
 Then of course, you'll want to add virtualbox to your running programs like so(I'm not sure if it'd be a problem, but you may also need to set nixpkgs.config.allowUnfree = true; I'm not sure if vbox is foss):
 
 """
+users.extraGroups.vboxusers.members = [ "YOURUSERNAME" ];
+
 virtualisation.virtualbox.host = {
     enable = true;
-    package = pkgs.virtualboxHeadless;
+    enableExtensionPack = true;
 };
 """
 
@@ -34,16 +36,20 @@ On that front, that's all you'll need to do. Most of the heavy lifts are done by
 
 (Vagrantfile)
 """
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
 Vagrant.configure("2") do |config|
-
-  config.vm.box = "ubuntu/kinetic64"
-
-  config.vm.network "public_network", use_dhcp_assigned_default_route: true
-
-  config.vm.synced_folder "./", "/home/vagrant/dev" #change this to your main dev folder, ./ is the host, /home/vagrant/dev is the guest
+  config.vm.network "public_network", ip: "192.168.56.10"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
   config.vm.provision "shell", inline: <<-SHELL
@@ -60,6 +66,7 @@ Vagrant.configure("2") do |config|
     echo "export ZSH="$HOME/.oh-my-zsh"\nsource $HOME/antigen.zsh\n\nexport NVM_DIR="$HOME/.nvm"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm\n[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion\n# Use Oh-My-Zsh\nantigen use oh-my-zsh\n\n# Set theme\nantigen theme agnoster\n\n# Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)\nantigen bundle zsh-users/zsh-autosuggestions\nantigen bundle zsh-users/zsh-completions\nantigen bundle zsh-users/zsh-syntax-highlighting\nantigen bundle copypath\nantigen bundle copyfile\nantigen bundle history\nantigen bundle history-substring-search\n\nantigen apply" > .zshrc
     nvm install node && nvm use node
   SHELL
+
 end
 """
 
@@ -118,3 +125,6 @@ X-DBUS-StartupType=none
 X-KDE-SubstituteUID=false
 X-KDE-Username=
 """
+
+
+(UPDATED 11/17/22:corrected to prevent icmp goofery)
