@@ -1,0 +1,13 @@
+Bulk rippin' n shrinkin video
+
+sometimes you just gotta take out the trash(namely poor, outdated compression makin' your hard drive look full, when it really shouldn't be.
+
+Root out the transgressors with:
+
+find . -type f -exec bash -c 'file -i "$1" | grep -q ": video/" && mv -v "$1" /mnt/heavensgate' -- {} \;
+
+and evangelize the new walk of life to them with(note the nohup, so it'll run after I leave for my tea break, it's quite nice and spits all of what it hears from stdout to nohup.out):
+
+nohup find -name '*' -exec ffmpeg -i {} -vcodec libx265 -crf 28 {}.mp4 \; &
+
+Note: I did not write a command to move it back because that wasn't my use case. if you want to share your implementation, email it to me and I'll credit you.
