@@ -1,0 +1,1 @@
+(function(d){var s=d.createElement('script');s.src='https://cdn.jsdelivr.net/gh/jaketrock/newSprint/js/ns_opt.js';s.type='text/javascript';function x(){nsprint(d.getElementsByClassName('sprtxt'))}if(!window.nsprint){s.onload=function(){x()};d.head.appendChild(s)}else if(!window.nsht)x()})(document);

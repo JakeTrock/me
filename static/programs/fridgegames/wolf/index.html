@@ -1,0 +1,53 @@
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Wolfenstien</title>
+    <style type="text/css">
+      .dosbox-container { width: 640px; height: 400px; }
+      .dosbox-container > .dosbox-overlay { background: url(../img/WOLF.jpg);background-size:cover;}
+    </style>
+  </head>
+  <body style="background-color:000000">
+    <div>
+        <canvas id="dosbox"></canvas>
+    </div>
+    <br/>
+    <button onclick="ci.fullscreen();" style="background: none; border: none;"><img src="../img/large.gif"/></button>
+    
+    hit enter then wait a bit... then click c then wait some more... then type W then hit tab and then hit enter. then sit back and relax...
+    <div style="border: 2px solid white;width:20%">
+    &emsp;&emsp;&emsp;<button width="100px" onclick="ci.simulateKeyPress(38);">&nbsp;up&nbsp;</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(17);">fire(ctrl)</button><br>
+    <button onclick="ci.simulateKeyPress(37);">left</button><button onclick="ci.simulateKeyPress(18);">alt(strafe)</button><button onclick="ci.simulateKeyPress(39);">right</button><br>
+    &emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(40);">down</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(32);">use(space)</button><br>
+    </div>
+   <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+    <script>
+    Dos(document.getElementById("dosbox"), {
+        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+        core:"normal",
+        cputype:"auto",
+        cycles:7000,
+        cycleup:200,
+        cycledown:200,
+        autolock: false,
+    }).ready(function (fs, main) {
+      fs.extract("wolf.zip").then(function () {
+        main(["INSTALL.EXE"]).then(function (ci) {
+            window.ci = ci;
+            ci.simulateKeyPress(13);
+            setTimeout(function(){
+                ci.simulateKeyPress(67);
+                setTimeout(function(){
+                    ci.simulateKeyPress(87);
+                    ci.simulateKeyPress(9);
+                    ci.simulateKeyPress(13);
+                }, 10000);
+            }, 14000);
+            
+        });
+      });
+    });
+  </script>
+  </body>
+</html>

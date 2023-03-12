@@ -1,0 +1,69 @@
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Commander Keen</title>
+  <style type="text/css">
+    .dosbox-container {
+      width: 640px;
+      height: 400px;
+    }
+
+    .dosbox-container>.dosbox-overlay {
+      background: url(../img/CKEEN.jpg);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body style="background-color:000000">
+  <div>
+    <canvas id="dosbox"></canvas>
+  </div>
+  <br />
+  <button onclick="ci.fullscreen();" style="background: none; border: none;"><img src="../img/large.gif" /></button>
+  <div style="border: 2px solid white;width:20%">
+    &emsp;<button width="100px" onclick="ci.simulateKeyPress(38);">&nbsp;up&nbsp;</button>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <button onclick="ci.simulateKeyPress(18);">alt</button><br>
+    <button onclick="ci.simulateKeyPress(37);">left</button>
+    <button onclick="ci.simulateKeyPress(39);">right</button>
+    &emsp;&emsp;&emsp;
+    <button onclick="ci.simulateKeyPress(32);">space</button><br>
+    &emsp;<button onclick="ci.simulateKeyPress(40);">down</button>
+    &emsp;&emsp;&emsp;
+    <button onclick="ci.simulateKeyPress(17);">control</button><br>
+  </div>
+  <pre style="color:white;border: 2px solid white;width:50%">
+    Left arrow key - Move left
+Right arrow key - Move right
+
+Ctrl - Jump(The longer you hold, the higher you'll jump)/Enter a level
+Alt - Toggle Pogo mode on
+Space - Fire Raygun
+
+F2 - Toggle sound on or off
+Esc - Exit game.
+  </pre>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+  <script>
+    Dos(document.getElementById("dosbox"), {
+      wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+      core: "normal",
+      cputype: "auto",
+      cycles: 7000,
+      cycleup: 200,
+      cycledown: 200,
+      autolock: false,
+    }).ready(function (fs, main) {
+      fs.extract("keen6.zip").then(function () {
+        main(["K6DEMO.EXE"]).then(function (ci) {
+          window.ci = ci;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
