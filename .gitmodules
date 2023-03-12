@@ -4,3 +4,6 @@
 [submodule "static/programs/newSprint"]
 	path = static/programs/newSprint
 	url = https://github.com/JakeTrock/newSprint
+[submodule "themes/risotto"]
+	path = themes/risotto
+	url = https://github.com/JakeTrock/risotto.git
