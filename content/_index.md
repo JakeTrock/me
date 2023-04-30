@@ -1,4 +1,9 @@
-Hello people of the internet! I'm Jake Trock! I'm currently attending Northeastern University and pursuing a degree in computer science and a minor in business. In the future, I hope to be an entrepreneur. My head's always full of ideas closely and loosely related to computer science, so hopefully I can branch out in the future. I'm quite open minded, and if I like your idea, I'll throw all of my weight into your project. If you're interested in contacting me or finding out more about what I'm doing, don't be afraid to contact me at trock.j(at)northeastern.edu(sorry, had to do that for anti-spam). I'll be working at the Broad institute of MIT and Harvard from January 16th to June. 
+Hello there, I'm Jacob Trock. I'm currently attending Northeastern University and pursuing a degree in computer science and in business(2025). I enjoy fixing old analog video equipment and helping people recover old tapes and fix their electronics.
+
+No graphical user interface on a simulation can ever compete with the human imagination - Ken Thompson
+
+Feel free to reach out. I enjoy a good conversation.
+
 <marquee>Have a look around!</marquee>
 <a style="color:white;background-color: var(--base09);border-radius: 25px;padding:0.5em" href="/resume/res.pdf">Resume(PDF)</a>
 <a style="color:white;background-color: var(--base0A);border-radius: 25px;padding:0.5em" href="/resume/res.pdf">Resume(DOCX)</a>
