@@ -5,7 +5,7 @@
 # newSprint
  a nice tool for quick reading
 
-# Live demo: [here](https://cleanconnect.us/programs/newSprint/demo.html)
+# Live demo: [here](https://jake.trock.com/programs/newSprint/demo.html)
 
 
 # for bloggers/news site owners/whatever
