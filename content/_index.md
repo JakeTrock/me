@@ -6,4 +6,4 @@ Feel free to reach out. I enjoy a good conversation.
 
 <marquee>Have a look around!</marquee>
 <a style="color:white;background-color: var(--base09);border-radius: 25px;padding:0.5em" href="/resume/res.pdf">Resume(PDF)</a>
-<a style="color:white;background-color: var(--base0A);border-radius: 25px;padding:0.5em" href="/resume/res.pdf">Resume(DOCX)</a>
+<a style="color:white;background-color: var(--base0A);border-radius: 25px;padding:0.5em" href="/resume/resume.docx">Resume(DOCX)</a>
