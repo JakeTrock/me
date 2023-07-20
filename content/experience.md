@@ -46,6 +46,15 @@ author = "Hugo Authors"
     }
 </style>
     <div class="gallery">
+        <img src="/images/aboutpage/geocrypt.png"
+            style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
+        <div class="desc">
+            <p>Geocrypt: encryption for the rest of us</p><br />
+            <button onclick="window.open('https://geocrypt.me')">Site</button><br>
+            <button onclick="window.open('https://github.com/trock-broadinst/geocrypt')">Github</button><br>
+        </div>
+    </div>
+    <div class="gallery">
         <img src="/images/aboutpage/seLogo.png"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
