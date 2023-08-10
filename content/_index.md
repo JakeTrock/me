@@ -1,4 +1,4 @@
-Hello there, I'm Jacob Trock. I'm currently attending Northeastern University and pursuing a degree in computer science and in business(2025). I enjoy fixing old analog video equipment and helping people recover old tapes and fix their electronics.
+Hello there, I'm Jacob Trock. I'm currently attending Northeastern University and pursuing a degree in computer science and in business(2025). In my free time, I enjoy helping people recover old tapes and fix their electronics.
 
 No graphical user interface on a simulation can ever compete with the human imagination - Ken Thompson
 
