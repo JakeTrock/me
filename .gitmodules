@@ -7,3 +7,6 @@
 [submodule "themes/risotto"]
 	path = themes/risotto
 	url = https://github.com/JakeTrock/risotto.git
+[submodule "static/programs/webSven"]
+	path = static/programs/webSven
+	url = https://github.com/JakeTrock/webSven
