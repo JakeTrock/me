@@ -46,6 +46,15 @@ author = "Hugo Authors"
     }
 </style>
     <div class="gallery">
+        <img src="https://paracordchat.github.io/paracord/logo.svg"
+            style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
+        <div class="desc">
+            <p>Paracord: A messenger that's High security, low barrier to entry</p><br />
+            <button onclick="window.open('https://paracordchat.github.io/paracord/')">Site</button><br>
+            <button onclick="window.open('https://github.com/ParacordChat/paracord')">Github</button><br>
+        </div>
+    </div>
+    <div class="gallery">
         <img src="/images/aboutpage/geocrypt.png"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
