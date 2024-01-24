@@ -1,11 +1,10 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+title = "experience"
+description = "Jacob Trock's programming experience"
+date = "2024-01-23"
+aliases = ["about-me", "about-jake", "contact"]
+author = "Jacob Trock"
 +++
-
 
 # Hello all! I'm Jacob Trock and I love to program.
 
@@ -14,13 +13,14 @@ author = "Hugo Authors"
 ---
 
 ## Languages/Libraries:
-### <i class="devicon-typescript-plain"></i> Typescript | <i class="devicon-nodejs-plain"></i> Nodejs | <i class="devicon-react-original"></i> React | <i       class="devicon-javascript-plain"></i> Javascript <i class="devicon-html5-plain"></i> Html5 | <i class="devicon-css3-plain"></i> CSS3 | <i class="devicon-java-plain"></i> Java | <i class="devicon-bash-plain"></i> Bash | <i class="devicon-python-plain"></i> Python | <i class="devicon-csharp-plain"></i> CSharp | <i class="devicon-arduino-plain"></i> Arduino | <i class="devicon-flutter-plain"></i> Flutter | <i class="devicon-gatsby-plain"></i> Gatsby | <i class="devicon-processing-plain"></i> Processing
+
+### <i class="devicon-typescript-plain"></i> Typescript | <i class="devicon-go-plain"></i> Golang | <i class="devicon-nodejs-plain"></i> Nodejs | <i class="devicon-react-original"></i> React | <i       class="devicon-javascript-plain"></i> Javascript <i class="devicon-html5-plain"></i> Html5 | <i class="devicon-css3-plain"></i> CSS3 | <i class="devicon-java-plain"></i> Java | <i class="devicon-bash-plain"></i> Bash | <i class="devicon-python-plain"></i> Python | <i class="devicon-csharp-plain"></i> CSharp | <i class="devicon-arduino-plain"></i> Arduino | <i class="devicon-flutter-plain"></i> Flutter | <i class="devicon-gatsby-plain"></i> Gatsby | <i class="devicon-processing-plain"></i> Processing
 
 ## Systems/Infrastructure:
-## <i class="devicon-devicon-plain"></i> DevOps | <i class="devicon-express-original"></i> Express | <i class="devicon-jest-plain"></i> Jest | <i class="devicon-docker-plain"></i> Docker | <i class="devicon-kubernetes-plain"></i> Kubernetes | <i class="devicon-postgresql-plain"></i> PostgreSQL | <i class="devicon-linux-plain"></i> Linux | <i class="devicon-nginx-original"></i> NGinx | <i class="devicon-mongodb-plain"></i> MongoDB | <i class="devicon-amazonwebservices-original"></i> AWS | <i class="devicon-digitalocean-plain"></i> Digital Ocean | <i class="devicon-illustrator-plain"></i> Illustrator | <i class="devicon-photoshop-plain"></i> Photoshop
+
+## <i class="devicon-devicon-plain"></i> DevOps | <i class="devicon-nixos-plain"></i> Nix | <i class="devicon-express-original"></i> Express | <i class="devicon-jest-plain"></i> Jest | <i class="devicon-docker-plain"></i> Docker | <i class="devicon-kubernetes-plain"></i> Kubernetes | <i class="devicon-postgresql-plain"></i> PostgreSQL | <i class="devicon-mysql-plain"></i> MySql | <i class="devicon-linux-plain"></i> Linux | <i class="devicon-nginx-original"></i> NGinx | <i class="devicon-mongodb-plain"></i> MongoDB | <i class="devicon-amazonwebservices-original"></i> AWS | <i class="devicon-digitalocean-plain"></i> Digital Ocean | <i class="devicon-illustrator-plain"></i> Illustrator | <i class="devicon-photoshop-plain"></i> Photoshop
 
 ---
-
 
 <html>
 <style>
@@ -44,7 +44,17 @@ author = "Hugo Authors"
         padding: 15px;
         text-align: center;
     }
+
 </style>
+    <div class="gallery">
+        <img src="/programs/catOutta/cat.png"
+            style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
+        <div class="desc">
+            <p>CatOutta: get files off your computer with just your monitor</p><br />
+            <button onclick="window.open('https://github.com/jaketrock/catOutta')">Github</button><br>
+            <button onclick="window.open('/programs/catOutta/index.html')">Demo</button><br>
+        </div>
+    </div>
     <div class="gallery">
         <img src="https://paracordchat.github.io/paracord/logo.svg"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
@@ -109,7 +119,7 @@ author = "Hugo Authors"
             <p>NewSprint lightweight speedreader</p><br />
             <button onclick="window.open('https://www.producthunt.com/posts/newsprint')">Product
                 Hunt</button><br>
-            <button onclick="window.open('/programs/newSprint/demo.html')">Github</button><br>
+            <button onclick="window.open('/programs/newSprint/demo.html')">Demo</button><br>
         </div>
     </div>
     <div class="gallery">
