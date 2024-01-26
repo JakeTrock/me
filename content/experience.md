@@ -74,6 +74,15 @@ author = "Jacob Trock"
         </div>
     </div>
     <div class="gallery">
+        <img src="/images/aboutpage/oasis.png"
+            style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
+        <div class="desc">
+            <p>Oasis typescript port: fediverse without servers</p><br />
+            <p>to my knowledge this is/was the first SSB client written in TS</p><br />
+            <button onclick="window.open('https://github.com/JakeTrock/oasis-ts')">Github</button><br>
+        </div>
+    </div>
+    <div class="gallery">
         <img src="/images/aboutpage/seLogo.png"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
