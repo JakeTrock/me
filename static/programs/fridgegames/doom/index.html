@@ -1,48 +1,90 @@
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Quake 1</title>
-    <style type="text/css">
-      .dosbox-container { width: 640px; height: 400px; }
-      .dosbox-container > .dosbox-overlay { background: url(../img/DOOM1.jpg);background-size:cover;}
-    </style>
-  </head>
-  <body style="background-color:000000">
-    <div>
-        <canvas id="dosbox"></canvas>
-    </div>
-    <br/>
-    <button onclick="ci.fullscreen();" style="background: none; border: none;"><img src="../img/large.gif"/></button>
-    <button onclick="ci.simulateKeyPress(68);ci.simulateKeyPress(79);ci.simulateKeyPress(9);ci.simulateKeyPress(13);">Press me to run doom after installing(please wait)</button><br>
-    <div style="border: 2px solid white;width:20%">
-    &emsp;&emsp;&emsp;<button width="100px" onclick="ci.simulateKeyPress(38);">&nbsp;up&nbsp;</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(17);">fire(ctrl)</button><br>
-    <button onclick="ci.simulateKeyPress(37);">left</button><button onclick="ci.simulateKeyPress(18);">alt(strafe)</button><button onclick="ci.simulateKeyPress(39);">right</button><br>
-    &emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(40);">down</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button onclick="ci.simulateKeyPress(32);">use(space)</button><br>
-    </div>
-   <script src="https://js-dos.com/6.22/current/js-dos.js"></script>  
-    <script>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Quake 1</title>
+  <style type="text/css">
+    .dosbox-container {
+      width: 640px;
+      height: 400px;
+    }
+
+    .dosbox-container>.dosbox-overlay {
+      background: url(../img/DOOM1.jpg);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body style="background-color:000000">
+  <div>
+    <canvas id="dosbox"></canvas>
+  </div>
+  <br />
+  <button onclick="ci.fullscreen();" style="background: none; border: none;"><img src="../img/large.gif" /></button>
+  <button
+    onclick="ci.simulateKeyPress(68);ci.simulateKeyPress(79);ci.simulateKeyPress(9);ci.simulateKeyPress(13);">Press me
+    to run doom after installing(please wait)</button><br>
+  you can use the touch controller or your keyboard:<br>
+  <div style="border: 2px solid white; width: 20%; padding: 10px;">
+    <table style="width: 100%; border-collapse: collapse; text-align: center;">
+      <tr>
+        <!-- Empty cell for spacing -->
+        <td></td>
+        <!-- Up button -->
+        <td><button onclick="ci.simulateKeyPress(38);">up</button></td>
+        <!-- Empty cell for spacing -->
+        <td></td>
+        <!-- Fire button -->
+        <td><button onclick="ci.simulateKeyPress(17);">fire(ctrl)</button></td>
+      </tr>
+      <tr>
+        <!-- Left button -->
+        <td><button onclick="ci.simulateKeyPress(37);">left</button></td>
+        <!-- Alt (strafe) button -->
+        <td><button onclick="ci.simulateKeyPress(18);">alt(strafe)</button></td>
+        <!-- Right button -->
+        <td><button onclick="ci.simulateKeyPress(39);">right</button></td>
+        <!-- Select button -->
+        <td><button onclick="ci.simulateKeyPress(13);">select(enter)</button></td>
+      </tr>
+      <tr>
+        <!-- Empty cell for spacing -->
+        <td></td>
+        <!-- Down button -->
+        <td><button onclick="ci.simulateKeyPress(40);">down</button></td>
+        <!-- Empty cell for spacing -->
+        <td></td>
+        <!-- Use button -->
+        <td><button onclick="ci.simulateKeyPress(32);">use(space)</button></td>
+      </tr>
+    </table>
+  </div>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+  <script>
     Dos(document.getElementById("dosbox"), {
-        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-        core:'dynamic',
-        cputype:'auto',
-        cycles:'auto',
-        cycleup:1000,
-        cycledown:1000
+      wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+      core: 'dynamic',
+      cputype: 'auto',
+      cycles: 'auto',
+      cycleup: 1000,
+      cycledown: 1000
     }).ready(function (fs, main) {
       fs.extract("doom.zip").then(function () {
         main(["DEICE.EXE"]).then(function (ci) {
-            window.ci = ci;
-            ci.simulateKeyPress(67);
+          window.ci = ci;
+          ci.simulateKeyPress(67);
+          ci.simulateKeyPress(13);
+          ci.simulateKeyPress(89);
+          setTimeout(function () {
+            ci.simulateKeyPress(9);
             ci.simulateKeyPress(13);
-            ci.simulateKeyPress(89);
-            setTimeout(function(){
-                ci.simulateKeyPress(9);
-                ci.simulateKeyPress(13);
-            }, 1000);
+          }, 1000);
         });
       });
     });
   </script>
-  </body>
+</body>
+
 </html>

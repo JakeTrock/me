@@ -23,19 +23,42 @@
   </div>
   <br />
   <button onclick="ci.fullscreen();" style="background: none; border: none;"><img src="../img/large.gif" /></button>
-  <div style="border: 2px solid white;width:20%">
-    &emsp;&emsp;&emsp;<button width="100px" onclick="ci.simulateKeyPress(38);">&nbsp;up&nbsp;</button>
-    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <button onclick="ci.simulateKeyPress(18);">alt</button><br>
-    <button onclick="ci.simulateKeyPress(37);">left</button>
-    <button onclick="ci.simulateKeyPress(32);">space</button>
-    <button onclick="ci.simulateKeyPress(39);">right</button><br>
-
-    &emsp;&emsp;&emsp;
-    <button onclick="ci.simulateKeyPress(40);">down</button>
-    &emsp;&emsp;&emsp;
-    <button onclick="ci.simulateKeyPress(17);">control</button><br>
+  you can use the touch controller or your keyboard:<br>
+  <div style="border: 2px solid white; width: 20%; padding: 10px;">
+    <table style="width: 100%; border-collapse: collapse; text-align: center;">
+      <tr>
+        <!-- Empty cell for D-pad alignment -->
+        <td style="width: 33%;"></td>
+        <!-- Up button -->
+        <td style="width: 33%;"><button onclick="ci.simulateKeyPress(38);">up</button></td>
+        <!-- Empty cell for spacing -->
+        <td style="width: 33%;"></td>
+        <!-- Alt button -->
+        <td><button onclick="ci.simulateKeyPress(18);">alt</button></td>
+      </tr>
+      <tr>
+        <!-- Left button -->
+        <td><button onclick="ci.simulateKeyPress(37);">left</button></td>
+        <!-- Space button -->
+        <td><button onclick="ci.simulateKeyPress(32);">space</button></td>
+        <!-- Right button -->
+        <td><button onclick="ci.simulateKeyPress(39);">right</button></td>
+        <!-- Empty cell for alignment -->
+        <td></td>
+      </tr>
+      <tr>
+        <!-- Empty cell for D-pad alignment -->
+        <td></td>
+        <!-- Down button -->
+        <td><button onclick="ci.simulateKeyPress(40);">down</button></td>
+        <!-- Empty cell for spacing -->
+        <td></td>
+        <!-- Control button -->
+        <td><button onclick="ci.simulateKeyPress(17);">control</button></td>
+      </tr>
+    </table>
   </div>
+
   <pre style="color:white;border: 2px solid white;width:50%">
     Left arrow key - Move left
 Right arrow key - Move right
