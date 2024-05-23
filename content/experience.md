@@ -52,7 +52,7 @@ author = "Jacob Trock"
         <div class="desc">
             <p>ClassicsReader: unlock new knowledge in an instant</p><br />
             <button onclick="window.open('https://github.com/jaketrock/ClassicsReader')">Github</button><br>
-            <button onclick="window.open('/programs/ClassicsReader/index.html')">Demo</button><br>
+            <button onclick="window.open('/programs/ClassicsReader/')">Demo</button><br>
         </div>
     </div>
     <div class="gallery">
