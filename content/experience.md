@@ -47,6 +47,15 @@ author = "Jacob Trock"
 
 </style>
     <div class="gallery">
+        <img src="/programs/ClassicsReader/assets/favicon.5fb1e05f.svg"
+            style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
+        <div class="desc">
+            <p>ClassicsReader: unlock new knowledge in an instant</p><br />
+            <button onclick="window.open('https://github.com/jaketrock/ClassicsReader')">Github</button><br>
+            <button onclick="window.open('/programs/ClassicsReader/index.html')">Demo</button><br>
+        </div>
+    </div>
+    <div class="gallery">
         <img src="/programs/catOutta/cat.png"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
