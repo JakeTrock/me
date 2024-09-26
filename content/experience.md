@@ -65,21 +65,21 @@ author = "Jacob Trock"
         </div>
     </div>
     <div class="gallery">
-        <img src="https://paracordchat.github.io/paracord/logo.svg"
+        <img src="/programs/paracord/logo.svg"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
             <p>Paracord: A messenger that's High security, low barrier to entry</p><br />
-            <button onclick="window.open('https://paracordchat.github.io/paracord/')">Site</button><br>
-            <button onclick="window.open('https://github.com/ParacordChat/paracord')">Github</button><br>
+            <button onclick="window.open('/programs/paracord/index.html')">Demo</button><br>
+            <button onclick="window.open('https://github.com/JakeTrock/paracord')">Github</button><br>
         </div>
     </div>
     <div class="gallery">
-        <img src="/images/aboutpage/geocrypt.png"
+        <img src="/programs/hypercell/hyperCell.png"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
-            <p>Geocrypt: encryption for the rest of us</p><br />
-            <button onclick="window.open('https://geocrypt.me')">Site</button><br>
-            <button onclick="window.open('https://github.com/trock-broadinst/geocrypt')">Github</button><br>
+            <p>HyperCell: encryption for the rest of us</p><br />
+            <button onclick="window.open('/programs/hypercell/index.html')">Demo</button><br>
+            <button onclick="window.open('https://github.com/JakeTrock/hypercell')">Github</button><br>
         </div>
     </div>
     <div class="gallery">
@@ -96,8 +96,6 @@ author = "Jacob Trock"
             style="height:45%;width:45%;display:block;margin-left:auto;margin-right:auto;" />
         <div class="desc">
             <p>Service engine: making computers listen</p><br />
-            <button onclick="window.open('https://sengineorg.github.io/')">About
-                site</button><br>
             <button onclick="window.open('https://www.producthunt.com/posts/sengine')">Product
                 Hunt</button><br>
         </div>

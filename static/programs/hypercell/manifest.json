@@ -1,0 +1,18 @@
+{
+    "theme_color": "#aa87de",
+    "background_color": "#0f0f0f",
+    "display": "minimal-ui",
+    "scope": "/",
+    "start_url": "/",
+    "name": "hyperCell",
+    "short_name": "hyperCell",
+    "description": "Encrypt files online free",
+    "icons": [
+        {
+            "src": "/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
