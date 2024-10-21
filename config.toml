@@ -15,7 +15,8 @@ ignoreErrors = ["error-remote-getjson"]
 sectionPagesMenu = "main"
 
 [params]
-noindex = false
+  noindex = false
+  favicon="images/favicon.ico"
 
 [params.theme]
 palette = "base16-dark"
