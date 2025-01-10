@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="logo/logo.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Trock's Site</title>
+    <script
+      src="https://unpkg.com/cursor-effects@latest/dist/browser.js"
+      defer
+    ></script>
+    <script>
+      window.addEventListener("load", (e) => {
+        new cursoreffects.bubbleCursor();
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+      defer
+    />
+    <style>
+      body {
+        background-image: url("./logo/95.jpg");
+        background-repeat: repeat;
+        color: #ffffff;
+        font-family: monospace;
+      }
+
+      .header {
+        background-color: #90a984;
+        padding: 10px;
+      }
+
+      .nav-link {
+        color: #66b2b2;
+        text-decoration: underline;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .resume-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #d4a373;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .profile-card {
+        background-color: #2d2d2d;
+        border-radius: 15px;
+        padding: 20px;
+        float: right;
+        width: 250px;
+      }
+
+      .body-card {
+        background-color: #2d2d2d;
+        border-radius: 15px;
+        padding: 20px;
+        float: left;
+        width: 250px;
+      }
+
+      .footer {
+        padding: 10px;
+        color: #666;
+        background-color: #2d2d2d;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .quote {
+        font-style: italic;
+        background-color: #d4a373;
+        border-radius: 15px;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .marquee-floater {
+        background-color: #d4a373;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      .fill-width {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .social-link {
+        color: #f8f8f0;
+        text-decoration: none;
+      }
+
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 30%;
+        border-radius: 15px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+        border-radius: 15px;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+
+      div.gallery button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #d4a373;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      div.gallery button:hover {
+        background-color: #777;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">[ Jacob Trock's Site ]</header>
+
+    <main class="content">
+      <div class="profile-card">
+        <div class="logo">
+          <img src="logo/jake.svg" style="width: 10em" alt="Logo" />
+        </div>
+        <h2>Jacob Trock</h2>
+        <p>Your friendly neighbourhood coder.</p>
+        <div class="social-links">
+          <a
+            class="social-link devicon-github-original"
+            href="https://github.com/jaketrock"
+          ></a>
+          <a
+            class="social-link devicon-google-plain"
+            href="mailto:jacobsamueltrock@gmail.com"
+          ></a>
+          <a
+            class="social-link devicon-linkedin-plain"
+            href="https://www.linkedin.com/in/jake-trock/"
+          ></a>
+        </div>
+        <hr />
+      </div>
+
+      <div class="body-card">
+        <p>
+          Hello there, I'm Jacob Trock. I'm a graduate of Northeastern
+          University, with a degree in computer science and in business. I am
+          currently a contractor for several different companies, which you can
+          see on my linkedin. In my free time, I enjoy helping people recover
+          old tapes, improve their health, and fix their electronics.
+        </p>
+
+        <blockquote class="quote">
+          <p>
+            No graphical user interface on a simulation can ever compete with
+            the human imagination – Ken Thompson
+          </p>
+        </blockquote>
+
+        <p>Feel free to reach out. I enjoy a good conversation.</p>
+
+        <div class="resume-links">
+          <a href="./resume/resume.pdf" class="resume-button">Resume(PDF)</a>
+          <a href="./resume/resume.docx" class="resume-button">Resume(DOCX)</a>
+        </div>
+      </div>
+
+      <div class="body-card fill-width">
+        <div class="content__body">
+          <h3>
+            I’ve done everything from dreamcast modding to devops to welding. To
+            keep it brief:
+          </h3>
+          <h2 id="languageslibraries">Languages/Libraries:</h2>
+          <h3>
+            <i class="devicon-typescript-plain"></i> Typescript |
+            <i class="devicon-go-plain"></i> Golang |
+            <i class="devicon-nodejs-plain"></i> Nodejs |
+            <i class="devicon-react-original"></i> React |
+            <i class="devicon-javascript-plain"></i> Javascript
+            <i class="devicon-html5-plain"></i> Html5 |
+            <i class="devicon-css3-plain"></i> CSS3 |
+            <i class="devicon-java-plain"></i> Java |
+            <i class="devicon-bash-plain"></i> Bash |
+            <i class="devicon-python-plain"></i> Python |
+            <i class="devicon-csharp-plain"></i> CSharp |
+            <i class="devicon-arduino-plain"></i> Arduino |
+            <i class="devicon-flutter-plain"></i> Flutter |
+            <i class="devicon-gatsby-plain"></i> Gatsby |
+            <i class="devicon-processing-plain"></i> Processing
+          </h3>
+          <h2 id="systemsinfrastructure">Systems/Infrastructure:</h2>
+          <h3>
+            <i class="devicon-devicon-plain"></i> DevOps |
+            <i class="devicon-nixos-plain"></i> Nix |
+            <i class="devicon-express-original"></i> Express |
+            <i class="devicon-jest-plain"></i> Jest |
+            <i class="devicon-docker-plain"></i> Docker |
+            <i class="devicon-kubernetes-plain"></i> Kubernetes |
+            <i class="devicon-postgresql-plain"></i> PostgreSQL |
+            <i class="devicon-mysql-plain"></i> MySql |
+            <i class="devicon-linux-plain"></i> Linux |
+            <i class="devicon-nginx-original"></i> NGinx |
+            <i class="devicon-mongodb-plain"></i> MongoDB |
+            <i class="devicon-amazonwebservices-original"></i> AWS |
+            <i class="devicon-digitalocean-plain"></i> Digital Ocean |
+            <i class="devicon-illustrator-plain"></i> Illustrator |
+            <i class="devicon-photoshop-plain"></i> Photoshop
+          </h3>
+          <hr />
+          <div class="gallery">
+            <img
+              src="./projects/ClassicsReader/assets/favicon.5fb1e05f.svg"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>ClassicsReader: unlock new knowledge in an instant</p>
+              <br />
+              <button
+                onclick="window.open('https://github.com/jaketrock/ClassicsReader')"
+              >
+                Github</button
+              ><br />
+              <button onclick="window.open('./projects/ClassicsReader/index.html')">
+                Demo</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/catOutta/cat.png"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>
+                CatOutta: get files off your computer with just your monitor
+              </p>
+              <br />
+              <button
+                onclick="window.open('https://github.com/jaketrock/catOutta')"
+              >
+                Github</button
+              ><br />
+              <button onclick="window.open('./projects/catOutta/index.html')">
+                Demo</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/paracord/logo.svg"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>
+                Paracord: A messenger that's High security, low barrier to entry
+              </p>
+              <br />
+              <button onclick="window.open('./projects/paracord/index.html')">
+                Demo</button
+              ><br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/paracord')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/hypercell/hyperCell.png"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>HyperCell: encryption for the rest of us</p>
+              <br />
+              <button onclick="window.open('./projects/hypercell/index.html')">
+                Demo</button
+              ><br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/hypercell')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/oasis.png"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>Oasis typescript port: fediverse without servers</p>
+              <br />
+              <p>
+                to my knowledge this is/was the first SSB client written in TS
+              </p>
+              <br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/oasis-ts')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/seLogo.png"
+              style="
+                height: 45%;
+                width: 45%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>Service engine: making computers listen</p>
+              <br />
+              <button
+                onclick="window.open('https://www.producthunt.com/posts/sengine')"
+              >
+                Product Hunt</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/cc.gif"
+              style="
+                height: 75%;
+                width: 75%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>CleanConnect full inventory and damage reporting suite</p>
+              <br />
+              <button
+                onclick="window.open('./projects/aboutImages/JakeCleanConn.mp4')"
+              >
+                CleanConnect video demo</button
+              ><br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/CleanConnect')"
+              >
+                Github page</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/paint.png"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>Fun with algorithms</p>
+              <br />
+              <button onclick="window.open('./projects/fun/index.html')">
+                check them out</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/quadruped.jpg"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>Robotics and Tinkering</p>
+              <br />
+              <p>A list of images of some tinkering I've done</p>
+              <br />
+              <button
+                onclick="window.open('/images/electronicsfun/index.html')"
+              >
+                check them out</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/ph_logo_anim.gif"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>NewSprint lightweight speedreader</p>
+              <br />
+              <button
+                onclick="window.open('https://www.producthunt.com/posts/newsprint')"
+              >
+                Product Hunt</button
+              ><br />
+              <button onclick="window.open('./projects/newSprint/demo.html')">
+                Demo</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/hyperlegible.png"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>
+                HyperLegible Accessibility tool for clearer reading and
+                disability assistance
+              </p>
+              <br />
+              <button
+                onclick="window.open('https://chrome.google.com/webstore/detail/hyperlegible/dkapghmeehbceoepemhkjhampmcpegfc')"
+              >
+                Chrome Web Store</button
+              ><br />
+              <button
+                onclick="window.open('https://addons.mozilla.org/en-US/firefox/addon/hyperlegible/')"
+              >
+                Firefox Web Store</button
+              ><br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/HyperLegible')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/level.png"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>IWBTC levelmaker online(like super mario maker)</p>
+              <br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/iwbtc-customLevelMaker')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/dux2.png"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>Chatpool RTC chat application</p>
+              <br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/chatpool')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+          <div class="gallery">
+            <img
+              src="./projects/aboutImages/fridgegames.jpg"
+              style="
+                height: 50%;
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              "
+            />
+            <div class="desc">
+              <p>
+                FridgeGames(Browser-based dos games, originally made as a joke
+                for my friend's smart fridge)
+              </p>
+              <br />
+              <button
+                onclick="window.open('./projects/fridgegames/index.html')"
+              >
+                Play with it</button
+              ><br />
+              <button
+                onclick="window.open('https://github.com/JakeTrock/fridgegames')"
+              >
+                Github</button
+              ><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <marquee>
+      <p class="marquee-floater">Have a look around!</p>
+    </marquee>
+
+    <footer class="footer">
+      © <span id="current-year"></span>
+      <a href="#" class="nav-link">Jacob Trock</a>
+    </footer>
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Set the current year in the span with id "current-year"
+      document.getElementById("current-year").textContent = currentYear;
+    </script>
+  </body>
+</html>
