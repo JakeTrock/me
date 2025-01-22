@@ -1,0 +1,160 @@
+body {
+  background-image: url("../logo/95.jpg");
+  background-repeat: repeat;
+  color: #ffffff;
+  font-family: monospace;
+}
+
+.header {
+  background-color: #90a984;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #66b2b2;
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d4a373;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.profile-card {
+  background-color: #2d2d2d;
+  border-radius: 15px;
+  padding: 20px;
+  float: right;
+  width: 250px;
+}
+
+.body-card {
+  background-color: #2d2d2d;
+  border-radius: 15px;
+  padding: 20px;
+  float: left;
+  width: 250px;
+}
+
+.centered-card {
+  background-color: #2d2d2d;
+  border-radius: 15px;
+  padding: 20px;
+  float: left;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 10px;
+  color: #666;
+  background-color: #2d2d2d;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.quote {
+  font-style: italic;
+  background-color: #d4a373;
+  border-radius: 15px;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.marquee-floater {
+  background-color: #d4a373;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.fill-width {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-link {
+  color: #f8f8f0;
+  text-decoration: none;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 30%;
+  border-radius: 15px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  border-radius: 15px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+div.gallery button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d4a373;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+div.gallery button:hover {
+  background-color: #777;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card,
+  .body-card,
+  .centered-card {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+    clear: both;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.gallery {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
